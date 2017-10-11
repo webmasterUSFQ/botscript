@@ -1,0 +1,35 @@
+<!-- FACEBOOK ES-->
+<context>
+	<input id="saludo-es" pattern="* (Hola|hola|Buenos|buenos|Buenas|buenas) *">
+		<context id="sin_sesion_es" if="empty($UserName)" modal="true">
+			<output value="Hola! bienvenido a la USFQ. ¿Cúal es tu nombre?"/>
+			<input pattern="$Text">
+				<var name="UserName" value="$Text" scope="user"/>
+				<output value="Mucho gusto $UserName! ¿Qué puedo hacer por ti?"/>
+			</input>
+		</context>
+	</input>
+
+	<!-- ADMISIONES ES-->
+	<input id="admision_general" pattern="* (información|informacion|admisiones|matrículas) *">
+		<output value="$UserName, en ésta página encontrarás la información que requieres http://www.usfq.edu.ec/admisiones/Paginas/default.aspx"/>
+	</input>
+
+
+	<input id="admision_pregrado" pattern="* (carreras|profesiones|oferta académica|oferta academica|pregado) *">
+		<output value="$UserName, en ésta dirección encontrarás información más detallada: http://www.usfq.edu.ec/programas_academicos/pregrado/Paginas/pregrado_dmision_agosto_2017.aspx"/>
+	</input>
+
+	<input id="admision_posgrado" pattern="* (carreras|profesiones|oferta académica|oferta academica|pregado) *">
+		<output value="$UserName, en ésta página encontrarás más información: http://www.usfq.edu.ec/programas_academicos/posgrado/Paginas/ofertaacademica.aspx"/>
+	</input>
+
+	<!-- CIERRE -->
+	<input id="cierre" pattern="* (Gracias|gracias) *">
+		<output>
+			<item>Es un placer poder ayudarte</item>
+			<item>Me alegra haberte ayudado</item>
+			<item>Un placer</item>
+		</output>
+	</input>
+</context>
