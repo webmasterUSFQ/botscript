@@ -24,11 +24,18 @@
 		</context>
 	</input>
 
-	<input id="admision_posgrado" pattern="* (carreras|profesiones|oferta académica|oferta academica|pregado) *">
+	<input id="admision_posgrado" pattern="* (posgrado|maestría|maestria|master) *">
 		<context id="info_posgrado_es">
 			<output value="$UserName, en ésta página encontrarás más información: http://www.usfq.edu.ec/programas_academicos/posgrado/Paginas/ofertaacademica.aspx"/>
 		</context>
 	</input>
+
+	<input id="admision_fechas" pattern="* (fechas|calendario|horario) *">
+		<context id="info_fechas">
+			<output value="$UserName, por favor revisa nuestro Calendario Académico para más información: http://www.usfq.edu.ec/calendario/Paginas/default.aspx"/>
+		</context>
+	</input>
+
 
 	<!-- CIERRE -->
 	<input id="cierre" pattern="* (Gracias|gracias) *">
